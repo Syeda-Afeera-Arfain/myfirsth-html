@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Display</title>
+		<script LANGUAGE="JavaScript" type="text/javascript">
+			function display() {
+			DispWin = window.open('','NewWin', 'toolbar=no,status=no,width=300,height=200')
+			message = "<ul><li><b>Name: </b>" + document.form1.yourname.value;
+			message += "<li><b>Address: </b>" + document.form1.address.value;
+			message += "<li><b>Phone: </b>" + document.form1.phone.value + "</ul>";
+			DispWin.document.write(message);
+			}
+		</script>
+	</head>
+	<body>
+		<h1>Form </h1>
+			Enter the following information. When you press the Display button,
+			the data you entered will be displayed in a pop-up window.
+		<form name="form1">
+			<p><b>Name:</b> <input TYPE="TEXT" SIZE="20" NAME="yourname">
+			</p>
+			<p><b>Address:</b> <input TYPE="TEXT" SIZE="20" NAME="address">
+			</p>
+			<p><b>Phone: </b> <input TYPE="NUMBER" SIZE="20" NAME="phone">
+			</p>
+			<p><input TYPE="BUTTON" VALUE="Submit" onClick="display();"></p>
+		</form>
+    </body>
+</html>
